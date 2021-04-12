@@ -4,17 +4,13 @@ from tkinter import ttk
 def save_info():
   originalText_info = originalText_entry.get(1.0,END)
   patternText_info = patternText_entry.get(1.0,END)
-  analyzeText_info = analyzeText_entry.get(1.0,END)
-  print(originalText_info, patternText_info, analyzeText_info)
+  print(originalText_info, patternText_info)
 
   file = open("original.txt", "w")
   file.write(originalText_info)
   file.close()
   file = open("pattern.txt","w")
   file.write(patternText_info)
-  file.close()
-  file = open("analyze.txt", "w")
-  file.write(analyzeText_info)
   file.close()
   print(" text has been registered successfully")
   plag = Label(screen,text="The plagiarism percentage is: ",font=("Tekton Pro",13))
@@ -65,6 +61,11 @@ reset = Button(screen,text="Reset",width="30",height="2",command=reset,bg="grey"
 reset.place(x=770,y=470)
 
 def count():
+  analyzeText_info = analyzeText_entry.get(1.0,END)
+  
+  file = open("analyze.txt", "w")
+  file.write(analyzeText_info)
+  file.close()
   wcount = Label(screen, text="The Word count of the article is : ", font=("Tekton Pro",13))
   wcount.place(x=940,y=550)
   lcount = Label(screen, text="The Line count of the article is : ", font=("Tekton Pro",13))
