@@ -4,7 +4,8 @@ from tkinter import ttk
 def save_info():
   originalText_info = originalText_entry.get(1.0,END)
   patternText_info = patternText_entry.get(1.0,END)
-  print(originalText_info, patternText_info)
+  analyzeText_info = analyzeText_entry.get(1.0,END)
+  print(originalText_info, patternText_info, analyzeText_info)
 
   file = open("original.txt", "w")
   file.write(originalText_info)
@@ -12,12 +13,16 @@ def save_info():
   file = open("pattern.txt","w")
   file.write(patternText_info)
   file.close()
+  file = open("analyze.txt", "w")
+  file.write(analyzeText_info)
+  file.close()
   print(" text has been registered successfully")
   plag = Label(screen,text="The plagiarism percentage is: ",font=("Tekton Pro",13))
   plag.place(x=420,y=520)
 
   originalText_entry.delete(1.0, END)
   patternText_entry.delete(1.0, END)
+  analyzeText_entry.delete(1.0, END)
   #return originalText_info, patternText_info
 
   
