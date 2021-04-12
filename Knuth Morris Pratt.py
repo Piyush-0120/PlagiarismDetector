@@ -82,7 +82,7 @@ class engine:
         else:
             return str(c / len(self.text.split()) * 100)
 '''
-To instantiate the object, the following calls need to be made       
+To instantiate the class, the following calls need to be made       
 ob = engine()
 ob.recieve_data()
 ob.send_data()
