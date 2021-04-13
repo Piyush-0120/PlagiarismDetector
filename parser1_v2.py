@@ -26,8 +26,10 @@ class Parser:
             print("type nltk.download('punkt') in python shell")
         sentences=[]
         for sentence in tokenized_sentence:
-            punctuation = re.compile(r'[-.?!,:;()\"|0-9]')
+            punctuation = re.compile(r'[-.?!,:;=+*/(){}\"|0-9]')
             s = punctuation.sub(' ',sentence)    #any further punctuators or separators do it in tokenize_word()
+            s=s.replace('[',' ')
+            s=s.replace(']',' ')
             sentences.append(s)
         self.sentences = sentences
         #print(sentences,end="\n")
