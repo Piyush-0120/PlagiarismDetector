@@ -65,8 +65,8 @@ class engine:
         '''
         ob1 = Parser2(self.data1)
         ob2 = Parser2(self.data2)
-        self.text = ob1.parsed_words()
-        self.patt = ob2.parsed_words()
+        self.text = set(ob1.parsed_words())
+        self.patt = set(ob2.parsed_words())
         self.total_words1 = len(self.text)
         self.total_words2 = len(self.patt)
 
