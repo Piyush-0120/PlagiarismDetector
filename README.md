@@ -44,7 +44,7 @@ Thus we can see that the total time complexity of KMP algorithm is **O(m+n)** wh
 ![image](https://user-images.githubusercontent.com/65674133/119249720-6b175580-bbb8-11eb-8cec-3ce9530c8f09.png)
 
 # Contribution
-Thank you to the collaborators
+I would like to thank the collaborators
 * [Sayantan-codes](https://github.com/Sayantan-codes)
 * [GauravGupta](https://github.com/GauravGupta035)
 * [sakar900](https://github.com/sakar900)
